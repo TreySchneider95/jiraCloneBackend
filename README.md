@@ -33,15 +33,6 @@ This jira clone will help you create and manage tasks to streamline production o
     - Change who ticket is assigned to
     - View all Users
 
-## Pages:
-    - Login page
-    - Register page
-    - Home page (where you view all tickets)
-    - Ticket page (view more details about specific ticket also where you can edit ticket and delete ticket)
-    - Ticket form page (Create new ticket)
-    - Profile page (view user registered information)
-    - Manage user page (View all users)
-
 ## Backend Routes:
     - (GET) /tickets/all
         - Gets all tickets
@@ -61,3 +52,20 @@ This jira clone will help you create and manage tasks to streamline production o
         - updates user info by id
     - (DELETE) /tickets/delete-one/:id
         - deletes ticket by id
+
+## Packages
+    - bcryptjs: ^2.4.3
+    - cookie-parser: ~1.4.4
+    - cors: ^2.8.5
+    - debug: ~2.6.9
+    - dotenv: ^16.0.3
+    - ejs: ^3.1.9
+    - express: ^4.18.2
+    - http-errors: ~1.6.3
+    - jade: ^0.29.0
+    - jsonwebtoken: ^9.0.0
+    - mongodb: ^5.0.1
+    - mongoose: ^6.9.1
+    - morgan: ~1.9.1
+    - nodemon: ^2.0.20
+    - uuidv4: ^6.2.13
