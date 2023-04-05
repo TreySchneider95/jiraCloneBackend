@@ -1,57 +1,57 @@
-# Jira Clone Final Project
+# Jira Clone Final Project Backend
 
 Jira Clone:
-This jira clone will help you create and manage tasks to streamline production on your next project. 
+This jira clone will help you create and manage tasks to streamline production on your next project.
 
-## Non user functionality:
+## Non-user functionality:
     - Create Profile:
-        - register as a new user
+    - register as a new user
     - Login
 
 ## User functionality:
     - Login/Logout
     - Create tickets:
-        - Add description of issue
+        - Add a description of the issue
         - Assign to a user
         - Pick a priority level
-    - Update a tickets status:
+    - Update the status of a ticket:
         - Statuses:
             - Pending (When first created)
-            - In progress (When user assigned says they are working on it)
-            - Done (When user assigned says they are done)
-    - Add update notes to tickets:
-        - User assigned can add notes to the ticket for updates or status of progress on the issue
+            - In progress (When the user assigned says they are working on it)
+            - Done (When the user assigned says they are done)
+            - Add update notes to tickets:
+            - User assigned can add notes to the ticket for updates or status of progress on the issue
     - View All tickets
     - View personal information:
         - Page that displays users registered information (email, name, phone number)
     - Edit personal information:
-        - Be able to chane registered information (email, name, phone number)
+        - Be able to change registered information (email, name, phone number)
 
 ## Admin functionality:
     - Everything a User can do
     - Delete tickets
-    - Change who ticket is assigned to
+    - Change who the ticket is assigned to
     - View all Users
 
 ## Backend Routes:
     - (GET) /tickets/all
-        - Gets all tickets
+        - Gets all the tickets
     - (GET) /tickets/one-ticket/:id
-        - Gets single ticket by id
+        - Gets a single ticket by id
     - (GET) /users/all
-        - Gets all users for admin
+        - Gets all the users for the admin
     - (POST) /tickets/create-one
-        - Creates ticket
+        - Creates the ticket
     - (POST) /users/login
-        - login for user
+        - A login for the user
     - (POST) /users/register
-        - registers user
+        - Registers the user
     - (PUT) /tickets/update-one/:id
-        - updates ticket by id
+        - Updates a ticket by id
     - (PUT) /users/update-one/:id
-        - updates user info by id
+        - Updates the user info by id
     - (DELETE) /tickets/delete-one/:id
-        - deletes ticket by id
+        - Deletes a ticket by id
 
 ## Packages
     - bcryptjs: ^2.4.3

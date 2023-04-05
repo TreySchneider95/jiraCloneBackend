@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 const {v4: uuidv4} = require("uuid")
 
-const blogsSchema = new mongoose.Schema({
+const TicketSchema = new mongoose.Schema({
     title: String,
     text: String,
     author: String,
@@ -10,6 +10,6 @@ const blogsSchema = new mongoose.Schema({
     createdAt: {type: Date, default: Date.now}
 })
 
-const Blog = mongoose.model("sample_blog", blogsSchema)
+const Ticket = mongoose.model("tickets", TicketSchema)
 
-module.exports = Blog
+module.exports = Ticket

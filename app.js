@@ -16,7 +16,7 @@ mongooseConnect();
 // importing from routes/ folder 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const blogsRouter = require('./routes/blogs');
+const ticketsRouter = require('./routes/tickets');
 
 //instantiate the actual express app
 const app = express();
@@ -44,7 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //we bind (associate) the routers to routes in our application
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/blogs', blogsRouter);
+app.use('/tickets', ticketsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -63,9 +63,5 @@ app.use(function(err, req, res, next) {
 }); 
 
 
-
-// app.listen(port, () => {
-//   console.log(`ExpressBlogger app listening on port ${port}`)
-// })
 
 module.exports = app;

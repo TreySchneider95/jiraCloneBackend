@@ -11,7 +11,7 @@ const all = async (req, res) => {
         const users = await User.find({})
         res.json({
             sucess:true,
-            blogs: blogs
+            users: users
         });
     } catch (error) {
         
