@@ -18,6 +18,18 @@ const all = async (req, res) => {
     }
 }
 
+const getOne = async (req, res) => {
+    try {
+        const user = await User.findOne({_id: req.params.id})
+        res.json({
+            sucess: true,
+            user: user
+        })
+    } catch (error) {
+        
+    }
+}
+
 const register = async (req, res) => {
       try {
         const email = req.body.email;
@@ -71,14 +83,14 @@ const login = async (req, res) => {
         
         const data = {
             date: new Date(),
-            userId: user.id, 
+            userId: user._id, 
             scope: userType,
             email: email
         };
         
         const token = generateUserToken(data);
         
-        res.json({ success: true, token, email, userType });
+        res.json({ success: true, token, email, userType, userId: user._id });
         return;
         } catch (error) {
         console.error(error);
@@ -91,5 +103,6 @@ const login = async (req, res) => {
 module.exports = {
     register,
     login,
-    all
+    all,
+    getOne
 }

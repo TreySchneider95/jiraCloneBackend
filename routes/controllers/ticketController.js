@@ -31,17 +31,18 @@ async function deleteTicket(req, res, next){
 
 async function postTicket(req, res, next){
     const title = req.body.title
-    const text = req.body.text
-    const author = req.body.author
-    const categories = req.body.categories
-
+    const description = req.body.description
+    const assignedToUserId = req.body.assignedToUserId
+    const status = req.body.status
+    const createdById = req.body.createdById
     const newticket = new Ticket({
         title,
-        text,
-        author,
-        categories
+        description,
+        assignedToUserId,
+        status,
+        createdById
     })
-
+    console.log(newticket)
     const saveData = await newticket.save()
 
     res.json({
