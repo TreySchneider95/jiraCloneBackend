@@ -14,7 +14,7 @@ async function getAllTickets(req, res, next) {
 
 
 async function getSingleTicket(req, res, next){
-    const ticket = await Ticket.findOne({id: req.params.ticketIdToGet})
+    const ticket = await Ticket.findOne({_id: req.params.ticketIdToGet})
     res.json({
         sucsess: true,
         ticket: ticket
