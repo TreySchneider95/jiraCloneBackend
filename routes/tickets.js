@@ -14,6 +14,6 @@ router.delete('/single/:ticketTitleToDelete', ticketController.deleteTicket)
 
 router.post('/create-one', ticketController.postTicket)
 
-router.put('/update-one/:title', ticketController.putTicket)
+router.put('/update-one/:id', ticketController.putTicket)
 
 module.exports = router;

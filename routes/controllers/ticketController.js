@@ -22,7 +22,7 @@ async function getSingleTicket(req, res, next){
 }
 
 async function deleteTicket(req, res, next){
-    const ticketToDelete = await Ticket.deleteOne({title: req.params.ticketTitleToDelete})
+    const ticketToDelete = await Ticket.deleteOne({_id: req.params.ticketTitleToDelete})
     res.json({
         sucess: true,
         ticket: ticketToDelete
@@ -53,7 +53,7 @@ async function postTicket(req, res, next){
 
 async function putTicket(req, res, next){
     const update = req.body
-    const ticketUpdate = await Ticket.updateOne({title: req.params.title}, update)
+    const ticketUpdate = await Ticket.updateOne({_id: req.params.id}, update)
 
     res.json({
         sucess: true,
